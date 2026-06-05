@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #bdcbb3;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6e7b66",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#032100",
+                        "primary-fixed-dim": "#60e13f",
+                        "tertiary": "#5c5f61",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-fixed-variant": "#0f5300",
+                        "surface": "#f8f9ff",
+                        "secondary-fixed": "#dae2fd",
+                        "on-background": "#0b1c30",
+                        "error": "#ba1a1a",
+                        "secondary": "#565e74",
+                        "inverse-primary": "#60e13f",
+                        "primary": "#176e00",
+                        "on-secondary-container": "#5c647a",
+                        "surface-container-low": "#eff4ff",
+                        "primary-fixed": "#7dff5a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#176e00",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container": "#e5eeff",
+                        "tertiary-container": "#b5b8ba",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "on-primary-container": "#0f5400",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#bdcbb3",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#45494b",
+                        "surface-variant": "#d3e4fe",
+                        "primary-container": "#50d130",
+                        "surface-container-high": "#dce9ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-surface-variant": "#3e4a38"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "md": "16px",
+                        "margin": "24px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "xxl": "64px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky z-40 bg-background/80 backdrop-blur-md flex justify-between items-center px-margin py-md w-full">
+<div class="flex items-center gap-md">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">arrow_back_ios_new</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Добавяне на храна</h1>
+</div>
+<div class="flex items-center gap-sm">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:opacity-80 transition-opacity active:scale-95">
+<span class="material-symbols-outlined text-on-surface">barcode_scanner</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin pt-sm">
+<!-- Search Section -->
+<section class="mb-lg">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-2 border-transparent focus:border-primary focus:ring-0 rounded-full font-body-md transition-all duration-300 outline-none" placeholder="Търсете храна или марка..." type="text"/>
+</div>
+</section>
+<!-- Categories / Quick Filters -->
+<section class="mb-xl overflow-x-auto pb-2 flex gap-sm no-scrollbar">
+<button class="tab-btn px-lg py-sm bg-primary text-on-primary rounded-full font-label-md transition-all duration-200 shrink-0" id="tab-recent" onclick="switchTab('recent')">
+                Последни
+            </button>
+<button class="tab-btn px-lg py-sm bg-surface-container-high text-on-surface-variant rounded-full font-label-md hover:bg-surface-container-highest transition-all duration-200 shrink-0" id="tab-favorites" onclick="switchTab('favorites')">
+                Любими
+            </button>
+<button class="tab-btn px-lg py-sm bg-surface-container-high text-on-surface-variant rounded-full font-label-md hover:bg-surface-container-highest transition-all duration-200 shrink-0" id="tab-custom" onclick="switchTab('custom')">
+                Мои рецепти
+            </button>
+</section>
+<!-- Dynamic Food List -->
+<section class="space-y-md" id="food-list-container">
+<!-- Header for context -->
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-label-md text-outline uppercase tracking-wider">Често консумирани</h2>
+<span class="font-label-sm text-primary">Виж всички</span>
+</div>
+<!-- Food Item 1 -->
+<div class="bg-white rounded-lg p-md shadow-sm border border-surface-container flex items-center gap-md group hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a glass of fresh organic milk on a wooden table, soft morning sunlight creating a warm and pure atmosphere. The style is clean, corporate modern with a focus on natural health and wellness, using a bright and high-key lighting setup that matches the white and green color palette of the UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXNL0vQLFp5F0WMGww9ytQgPe8_ZgVROWv1SU53tV2oCo4eKhXp9Jvomgn3S71cgJziP7MQaHQ69p6e6-CngdyuQUc_vR8S16u0Adh_M74DmqC3X1hNNgKOb9TNOtoamennrjYiflOBPRQv2Qn1ygcj_0wWQtlG0I2XZ4WE9UWzlJxKzOen9bl_nGQQyesj7esCNZ91t9UPr766KOyuZOZoV15DGhPNbe2C7mNyVs0uCUv-LXe1kbpNKvFE-hI7gLgntPLfqp-W7c"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-on-surface">Прясно мляко 1.5%</h3>
+<p class="font-label-sm text-on-surface-variant">100 мл • 44 ккал</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Item 2 -->
+<div class="bg-white rounded-lg p-md shadow-sm border border-surface-container flex items-center gap-md group hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional food photography shot of a healthy whole grain avocado toast, garnished with sesame seeds and chili flakes. The lighting is bright and optimistic, reflecting a high-vibrancy lifestyle brand. The scene is clean, minimal, and emphasizes clarity and structural reliability in a modern wellness context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHUli2_4BOFUsZ3UKYSIJm5r0z6NKOtmWFpJT4J-k0W3DFuCmj-c-lf_0X_9OLg4wnbh3BwzVSP-zBL5VDBVH5tpZYB9Skt4MHAZGvhFYDz15QWChhFuBWgTtInbw2uZMwV2DnZCbwvtNb7kK8qKgcHZl0mS8sCI-gtjyJkasMZqHy7x7TlPmO1Dwq6FKqbVg9uAdmXhm7kbrSzqqU6ReROrVytaS8vGWrz4qDb1O-qHublnhS__NFkSRETj_WcSHjLklLlgW4xP8"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-on-surface">Авокадо тост</h3>
+<p class="font-label-sm text-on-surface-variant">1 порция • 280 ккал</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Item 3 -->
+<div class="bg-white rounded-lg p-md shadow-sm border border-surface-container flex items-center gap-md group hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A vibrant salad bowl with grilled chicken, quinoa, and colorful vegetables, presented in a minimalist ceramic bowl. The lighting is soft and diffused with a sophisticated soft shadow, creating a premium health-focused aesthetic. The color palette is dominated by fresh greens and natural tones, consistent with a modern corporate wellness app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1GukKDLHQ3W8w7SCzK30K6G145SG91R8KMfdztGiJiRjgAgR-T_EzYpHlPpLHFXvRSKas4Prs1hWMBM1Eb8IhmhKG6eLCTatFWTXFUqFyPVqR1ozB7yNtct37KWc_8kgr6eo-RtPirLfUeyjwNUgs7ZQNlnaDQDREhnrP2-V-Z5zewhblPwYeS-fmXAOsTBIW1sWGMAolTERENGZidUT0yJU8M3WZiMkvYZEJfg67XWXh3vTbwN-8JTejsLRLYTpUObC4yTm9--s"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-on-surface">Пилешка салата с киноа</h3>
+<p class="font-label-sm text-on-surface-variant">350 гр • 420 ккал</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+<!-- Food Item 4 -->
+<div class="bg-white rounded-lg p-md shadow-sm border border-surface-container flex items-center gap-md group hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-surface-container-low overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist bowl of greek yogurt topped with fresh blueberries and honey. The background is a soft light blue surface, creating a high-energy wellness vibe. The lighting is bright and cheerful, evoking feelings of renewal and optimism, perfectly aligned with a professional personal coaching interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgIL5Z3mn150oK0q474UoYnE5XGp5mXfjImZvAXkk8ovU-snulj28s6Ig3ODWKdr6yQpBSi2W6dZCDmW8Fj6IfMyl1Un5M2SDHRd8fIxxE-2bJmZFW3r533_PXUkGP7iwqI-35TC4tDzeAirdx_L5oyKG2zil4LIMCVaEWe_QAiWbvAeROzCCbLCLrFkIqUAYrbsKwOxWYHyR4C5hpnK76TVznut5GSfdUthP5mCdSdW8K9ZOmmLs4V6OqzPy2QF8ewzMlW2BfPng"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-md text-on-surface">Гръцко кисело мляко</h3>
+<p class="font-label-sm text-on-surface-variant">200 гр • 120 ккал</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</section>
+<!-- Floating Quick Action for Custom Entry -->
+<div class="mt-xl text-center">
+<button class="inline-flex items-center gap-sm px-xl py-md bg-secondary text-on-secondary rounded-full font-label-md hover:opacity-90 transition-opacity active:scale-95">
+<span class="material-symbols-outlined">edit_note</span>
+                Ръчно добавяне
+            </button>
+</div>
+</main>
+<!-- Shared Bottom Nav Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface shadow-[0_-4px_12px_rgba(15,23,42,0.1)] rounded-t-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-sm text-label-sm">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-sm text-label-sm">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<!-- Micro-interaction Script -->
+<script>
+        function switchTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-primary', 'text-on-primary');
+                tab.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+            });
+
+            const activeTab = document.getElementById('tab-' + tabId);
+            activeTab.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+            activeTab.classList.add('bg-primary', 'text-on-primary');
+
+            // Simulate content loading animation
+            const container = document.getElementById('food-list-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        }
+
+        // Add to buttons ripple effect simulation or scale
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.96)';
+            });
+            btn.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>helt.ty — Здраве. Ежедневно. Ти.</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="screen-panel" aria-label="Екрани от Stitch">
+        <div class="screen-panel__header">
+          <img
+            class="screen-panel__logo"
+            alt="helt.ty"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8xx7UCqvmo7gg4pN5YxoVNXXzcvidUPRdOZzhcm5UKpUk6qx3zZLPKalRy81S4x5f-1VYwcSgXnjyPJigggt35EGep3V8ZBeVipgYcTEJDZtz6600nUf5dZRfDxkW8zle1IKJrkA-r5Ypav81Rw885yLgCPf3PNTI0XGC8vRDBG8BnUe_OkF-LN4gHCeC3xD3vNH8re-fTMf1DVZTej15JYsjKfPAIJju55gwmLaMpgDO5eg28tWob-tCbNFCKHKi1YfZWkqDLCo"
+          />
+          <div>
+            <h1 class="screen-panel__title">helt.ty</h1>
+            <p class="screen-panel__subtitle">Stitch дизайн преглед</p>
+          </div>
+        </div>
+        <nav class="screen-panel__nav" id="screen-list"></nav>
+        <p class="screen-panel__hint">
+          Изберете екран отляво. Основната навигация е в долната лента на телефона.
+        </p>
+      </aside>
+
+      <main class="device-stage">
+        <div class="device" role="region" aria-label="Мобилно приложение helt.ty">
+          <div class="device__bezel">
+            <div class="device__notch" aria-hidden="true"></div>
+            <div class="device__status">
+              <span class="device__time" id="status-time">09:41</span>
+              <div class="device__status-icons" aria-hidden="true">
+                <span class="material-symbols-outlined">signal_cellular_alt</span>
+                <span class="material-symbols-outlined">wifi</span>
+                <span class="material-symbols-outlined">battery_full</span>
+              </div>
+            </div>
+            <div class="device__toolbar" id="device-toolbar" hidden>
+              <button class="device__back" id="back-btn" type="button" aria-label="Назад">
+                <span class="material-symbols-outlined">arrow_back</span>
+              </button>
+              <span class="device__screen-title" id="screen-title"></span>
+            </div>
+            <div class="device__screen">
+              <iframe
+                id="screen-frame"
+                title="helt.ty екран"
+                sandbox="allow-scripts allow-same-origin"
+              ></iframe>
+            </div>
+            <nav class="device__tabs" id="tab-bar" aria-label="Основна навигация"></nav>
+            <div class="device__home-indicator" aria-hidden="true"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

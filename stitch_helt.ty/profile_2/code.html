@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Профил - helt.ty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#5c5f61",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#bdcbb3",
+                        "on-secondary-fixed": "#131b2e",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-dim": "#cbdbf5",
+                        "primary": "#176e00",
+                        "surface-tint": "#176e00",
+                        "surface-container-high": "#dce9ff",
+                        "on-surface-variant": "#3e4a38",
+                        "primary-fixed-dim": "#60e13f",
+                        "surface-container": "#e5eeff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#60e13f",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#50d130",
+                        "on-primary-container": "#0f5400",
+                        "surface-variant": "#d3e4fe",
+                        "tertiary-container": "#b5b8ba",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "primary-fixed": "#7dff5a",
+                        "outline": "#6e7b66",
+                        "on-secondary-container": "#5c647a",
+                        "background": "#f8f9ff",
+                        "secondary-fixed": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#0b1c30",
+                        "on-surface": "#0b1c30",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#0f5300",
+                        "inverse-surface": "#213145",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-tertiary-container": "#45494b",
+                        "on-primary-fixed": "#032100",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-container": "#dae2fd",
+                        "secondary": "#565e74"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xl": "40px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "xxl": "64px",
+                        "margin": "24px",
+                        "lg": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Manrope", "sans-serif"],
+                        "headline-xl": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        .ios-shadow {
+            box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.04), 0 2px 12px -1px rgba(0, 0, 0, 0.02);
+        }
+        
+        body {
+            -webkit-tap-highlight-color: transparent;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-sans min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 flex justify-between items-center px-6 h-16 md:hidden">
+<div class="flex items-center gap-2">
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRJbCNuJAlmgngenqE38oirLf6BA34bCRwibnyQyC-5cdbOzF9QGx0CjHjyf_qBEPTqBCExQ3jJy8S6sAKQIBJ5pm52qvq1rdM7XN7pWg2ZtyG9OuPT4qv4UdEAaglD1dt9b-wgKSQGn87u746Fk_-NMxr4iIe2e-XyK0zape53RpKb5VjBtzCO_gxOKQtbUOiw5fQs6YpWvPdzGyyq01T21MPaU036zppSahzQ1h32S1c0BOb2zwzfWpaXlnBsRyYJB7uNVWRldY"/>
+</div>
+<div class="text-headline-md text-primary font-extrabold tracking-tight">helt.ty</div>
+<button aria-label="Settings" class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl px-10 h-20 justify-between items-center border-b border-outline-variant/10">
+<div class="text-headline-lg text-primary font-extrabold tracking-tighter">helt.ty</div>
+<div class="flex gap-10">
+<a class="text-body-md font-semibold text-secondary hover:text-primary transition-colors" href="#">Начало</a>
+<a class="text-body-md font-semibold text-secondary hover:text-primary transition-colors" href="#">Активност</a>
+<a class="text-body-md font-semibold text-secondary hover:text-primary transition-colors" href="#">Хранене</a>
+<a class="text-body-md font-bold text-primary" href="#">Профил</a>
+</div>
+<div class="flex items-center gap-4">
+<img alt="User Avatar" class="w-11 h-11 rounded-full object-cover border border-outline-variant/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf0rd_G3vlnguEvBEYqBqu4RaI-oCMINquA5Hrhb7xZ-OWXUStNUgv79Z0cNg_APV3wshqR7MCjbCwceEIFsb8snV49lrOb7hbS_Ai9OwGV3aVK-Pp-7rhRUMNFvBBMV9JNA88oAhBUmjvvT_0C8K44rCvUdXr9ELyUW5d7t5UNCOWC_nXkAk_Ddw6USHHAX-Aq5NKKCiVwZNMiI-psIaxtbMV9NKkk5G0gco7fdiXdv74IPHADk0_wZoeXCjHNawjA4P6t1t7PuA"/>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24 md:pt-32 px-6 md:px-10 max-w-5xl mx-auto space-y-8">
+<!-- Profile Header Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- User Bio Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-3xl p-8 ios-shadow flex flex-col md:flex-row items-center md:items-start gap-8">
+<div class="relative">
+<div class="w-32 h-32 md:w-36 md:h-36 rounded-full p-1 border-2 border-primary/20">
+<img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFIbYZ1WzauIUUpiQEFwqk1uZ88dSOadkhjdgbstEAUJ8gxuBSxKXf1iSCwGHWrm-C7KWdPjF6Q3xVbszCgHKIKbvQQEqaoSp6iO2PyLbyJE_CJYSRB_X9hkMu7CttE_MjQSqYS6MTiMLi3F_uDXJphoB01jnKBKlY2r7pNnCbprJQoglSYN03NLgp3dffmYlQ433mmkJh6hkdC8PkVv_s_8lVTK7XSLYmNFdlCyHqIqN2BbqP0nVuRLyT6undBEUFmpgCV4Jyy60"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:brightness-110 active:scale-90 transition-all border-4 border-surface-container-lowest">
+<span class="material-symbols-outlined text-xl" data-icon="edit">edit</span>
+</button>
+</div>
+<div class="flex-1 text-center md:text-left space-y-4">
+<div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Елена Иванова</h1>
+<p class="text-body-md text-secondary font-medium">elena.ivanova@example.com</p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-start gap-3">
+<div class="bg-secondary-container/30 px-4 py-2 rounded-2xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="monitor_weight">monitor_weight</span>
+<span class="text-label-md text-on-secondary-container">65 кг</span>
+</div>
+<div class="bg-secondary-container/30 px-4 py-2 rounded-2xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="height">height</span>
+<span class="text-label-md text-on-secondary-container">170 см</span>
+</div>
+<div class="bg-secondary-container/30 px-4 py-2 rounded-2xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="cake">cake</span>
+<span class="text-label-md text-on-secondary-container">28 г.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Widget Card -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-3xl p-8 ios-shadow flex flex-col items-center justify-center text-center">
+<h2 class="text-label-md font-bold text-on-surface-variant uppercase tracking-widest mb-6">Дневна Цел</h2>
+<div class="relative w-36 h-36">
+<svg class="w-full h-full" viewbox="0 0 100 100">
+<circle class="text-surface-container stroke-current" cx="50" cy="50" fill="none" r="44" stroke-width="10"></circle>
+<circle class="text-primary stroke-current progress-ring-circle" cx="50" cy="50" fill="none" r="44" stroke-dasharray="276.46" stroke-dashoffset="55.29" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-headline-md text-on-surface font-extrabold">80%</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Постигната</span>
+</div>
+</div>
+<p class="text-body-md font-bold text-primary mt-6">8 000 <span class="text-secondary font-medium">/ 10 000 крачки</span></p>
+</div>
+</section>
+<!-- Settings Menu Section -->
+<section class="bg-surface-container-lowest rounded-3xl ios-shadow overflow-hidden">
+<div class="px-8 py-6 border-b border-outline-variant/10">
+<h2 class="text-headline-md text-on-surface font-bold">Настройки</h2>
+</div>
+<div class="divide-y divide-outline-variant/10">
+<a class="flex items-center px-8 py-5 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="health_metrics">health_metrics</span>
+</div>
+<div class="ml-5 flex-1">
+<span class="text-body-lg font-bold text-on-surface">Здравни данни</span>
+<p class="text-label-sm text-secondary font-medium">Биометрични данни и история</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center px-8 py-5 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<div class="ml-5 flex-1">
+<span class="text-body-lg font-bold text-on-surface">Известия</span>
+<p class="text-label-sm text-secondary font-medium">Персонализирайте напомнянията</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="flex items-center px-8 py-5 hover:bg-surface-container-low transition-colors group" href="#">
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
+</div>
+<div class="ml-5 flex-1">
+<span class="text-body-lg font-bold text-on-surface">Поверителност</span>
+<p class="text-label-sm text-secondary font-medium">Сигурност и настройки на профила</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- Logout Action -->
+<section class="pb-10">
+<button class="w-full h-16 bg-primary text-on-primary rounded-3xl font-bold text-body-lg shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+            Изход от профила
+        </button>
+</section>
+</main>
+<!-- Bottom Tab Bar (iOS style) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/10 md:hidden">
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="home">home</span>
+<span class="text-[11px] font-bold">Начало</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="insights">insights</span>
+<span class="text-[11px] font-bold">Активност</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="restaurant">restaurant</span>
+<span class="text-[11px] font-bold">Хранене</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary w-16" href="#">
+<span class="material-symbols-outlined text-[28px] mb-1" data-icon="person" data-weight="fill">person</span>
+<span class="text-[11px] font-extrabold">Профил</span>
+</a>
+</nav>
+</body></html>

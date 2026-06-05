@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Детайли за тренировка | helt.ty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(80, 209, 48, 0.2) 0%, rgba(80, 209, 48, 0) 100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6e7b66",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#032100",
+                        "primary-fixed-dim": "#60e13f",
+                        "tertiary": "#5c5f61",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-fixed-variant": "#0f5300",
+                        "surface": "#f8f9ff",
+                        "secondary-fixed": "#dae2fd",
+                        "on-background": "#0b1c30",
+                        "error": "#ba1a1a",
+                        "secondary": "#565e74",
+                        "inverse-primary": "#60e13f",
+                        "primary": "#176e00",
+                        "on-secondary-container": "#5c647a",
+                        "surface-container-low": "#eff4ff",
+                        "primary-fixed": "#7dff5a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#176e00",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container": "#e5eeff",
+                        "tertiary-container": "#b5b8ba",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "on-primary-container": "#0f5400",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#bdcbb3",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#45494b",
+                        "surface-variant": "#d3e4fe",
+                        "primary-container": "#50d130",
+                        "surface-container-high": "#dce9ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-surface-variant": "#3e4a38"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "md": "16px",
+                        "margin": "24px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "xxl": "64px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-background flex justify-between items-center px-margin py-md w-full">
+<div class="flex items-center gap-md">
+<button class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-primary">arrow_back_ios</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Детайли за тренировка</h1>
+</div>
+<div class="flex items-center gap-md">
+<button class="active:scale-95 transition-transform hover:opacity-80">
+<span class="material-symbols-outlined text-on-surface-variant">share</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a fitness-oriented woman with a friendly expression. She is in a brightly lit, modern environment with soft focus in the background. The lighting is high-key and natural, emphasizing a clean and healthy lifestyle aesthetic. The color palette is composed of soft whites, light blues, and vibrant green accents that match a premium health app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwxRlR8oVYPcYaitUja9OHLf8hQ1uqDI6djV6ldPEqwuwF_2rNPPUS6LANQ_OQwEeuVBIF7lTfx1qA4ldX1bMe-NjxfW4SsuOzFWEOaKcmXVBLaIqICx0rdU-P8bGrVsWwvusp0SKa3C4KuOm9dEgE8mn4lL39cd2LOrQ6OeNMCn7YaDoJThevlnhx3YXkvm4XcpKxA_lNGo8BpVRXZsY4L8z0vfr_3LdJh149m28GJcj0VumFQyMtSIuSd60tYKNLFryZEtabbJ4"/>
+</div>
+</div>
+</header>
+<main class="px-margin pt-md space-y-xl max-w-4xl mx-auto">
+<!-- Primary Hero Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Duration Card -->
+<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm flex flex-col items-center justify-center border border-surface-variant/30">
+<span class="material-symbols-outlined text-primary text-4xl mb-sm" style="font-variation-settings: 'FILL' 1;">timer</span>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Продължителност</p>
+<h2 class="font-headline-xl text-headline-xl text-primary mt-xs">48:12</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">мин/сек</p>
+</div>
+<!-- Calories Card -->
+<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm flex flex-col items-center justify-center border border-surface-variant/30">
+<span class="material-symbols-outlined text-orange-500 text-4xl mb-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Изгорени калории</p>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-xs">432</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">kcal</p>
+</div>
+<!-- HR Card -->
+<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm flex flex-col items-center justify-center border border-surface-variant/30">
+<span class="material-symbols-outlined text-red-500 text-4xl mb-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Среден пулс</p>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mt-xs">142</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">bpm</p>
+</div>
+</section>
+<!-- Route Map Section (Bento Style) -->
+<section class="grid grid-cols-1 lg:grid-cols-5 gap-lg">
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden border border-surface-variant/30 h-[400px] relative group">
+<img alt="Workout Route Map" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="A clean, minimalist topographical map view of a city park with a highlighted neon green GPS running path winding through the trails. The map is rendered in a high-contrast light mode with soft grey streets and lush green areas. The visual style is crisp and modern, mimicking a high-end sports tracking application. The lighting is even and bright, emphasizing clarity and movement." data-location="Sofia, Bulgaria" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo_biTQkJMqeGy138ebY9cShiUyP6pVnBy2Niv4UIgC_LaYcNVxkojdmAry_K6TmnjrCV72-QQrxsvCdiiU9IvS3sDugA7o41xq8aDS5frH0fqezadYBSGvgqAFZgwyvY16Vi_05cQTERJqLtC9A22VzKFTTxgRXX14sfiavSRkGklAg45gR2bYOaa7ssuhiKElCUhXjxT7VXWG89Vu0tRknEiGd9mzFbDyjf9UZGkulNpq1rbqK8fS9ef-7zrIc18ZSf8qq-izeM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-lg left-lg text-white">
+<p class="font-label-sm text-label-sm uppercase opacity-80">Маршрут</p>
+<h3 class="font-headline-md text-headline-md">Южен Парк, София</h3>
+</div>
+<div class="absolute top-lg right-lg bg-white/90 backdrop-blur-md px-md py-sm rounded-full flex items-center gap-xs shadow-md">
+<span class="material-symbols-outlined text-primary text-sm">distance</span>
+<span class="font-label-md text-label-md text-on-surface">6.42 км</span>
+</div>
+</div>
+<!-- Intensive HR Chart -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-lg rounded-lg shadow-sm border border-surface-variant/30 flex flex-col">
+<div class="flex justify-between items-center mb-lg">
+<h3 class="font-headline-md text-headline-md text-on-surface">Интензивност</h3>
+<span class="material-symbols-outlined text-on-surface-variant">monitoring</span>
+</div>
+<div class="flex-grow flex items-end gap-1 h-48 relative">
+<!-- Dummy Chart Bars -->
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 30%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 45%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 60%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 85%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 70%;"></div>
+<div class="flex-1 bg-primary rounded-t-full" style="height: 95%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 80%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 65%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 50%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 40%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 55%;"></div>
+<div class="flex-1 bg-primary-container rounded-t-full" style="height: 75%;"></div>
+</div>
+<div class="mt-lg space-y-md">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">Максимален пулс</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">178 bpm</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">Зона на аеробност</span>
+<span class="font-label-md text-label-md text-primary font-bold">82% от времето</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Splits or Additional Details -->
+<section class="bg-surface-container-lowest rounded-lg shadow-sm border border-surface-variant/30 overflow-hidden">
+<div class="p-lg border-b border-surface-variant/20 flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md">Километрични разбити</h3>
+<button class="text-primary font-label-md flex items-center gap-xs">
+                    Виж всички <span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+<div class="divide-y divide-surface-variant/20">
+<div class="px-lg py-md flex justify-between items-center hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-bold">1</span>
+<span class="font-body-md text-body-md">Първи километър</span>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md">05:12 /км</p>
+<p class="text-xs text-green-600 font-bold">-12 сек</p>
+</div>
+</div>
+<div class="px-lg py-md flex justify-between items-center hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-bold">2</span>
+<span class="font-body-md text-body-md">Втори километър</span>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md">05:08 /км</p>
+<p class="text-xs text-green-600 font-bold">-04 сек</p>
+</div>
+</div>
+<div class="px-lg py-md flex justify-between items-center hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<span class="w-8 h-8 rounded-full bg-primary-container/20 text-primary flex items-center justify-center font-bold">3</span>
+<span class="font-body-md text-body-md">Трети километър</span>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md">05:15 /км</p>
+<p class="text-xs text-red-600 font-bold">+07 сек</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface shadow-[0_-4px_12px_rgba(15,23,42,0.1)] rounded-t-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Табло</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-label-sm text-label-sm">Активност</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-label-sm text-label-sm">Хранене</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-container-high transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Профил</span>
+</a>
+</nav>
+<script>
+        // Simple interaction for split items
+        document.querySelectorAll('.divide-y > div').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.add('scale-98', 'opacity-80');
+                setTimeout(() => {
+                    item.classList.remove('scale-98', 'opacity-80');
+                }, 100);
+            });
+        });
+    </script>
+</body></html>

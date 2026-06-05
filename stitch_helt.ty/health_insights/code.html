@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>helt.ty - Здравни данни</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "outline": "#6e7b66",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#032100",
+                        "primary-fixed-dim": "#60e13f",
+                        "tertiary": "#5c5f61",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-fixed-variant": "#0f5300",
+                        "surface": "#f8f9ff",
+                        "secondary-fixed": "#dae2fd",
+                        "on-background": "#0b1c30",
+                        "error": "#ba1a1a",
+                        "secondary": "#565e74",
+                        "inverse-primary": "#60e13f",
+                        "primary": "#176e00",
+                        "on-secondary-container": "#5c647a",
+                        "surface-container-low": "#eff4ff",
+                        "primary-fixed": "#7dff5a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface": "#0b1c30",
+                        "surface-tint": "#176e00",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container": "#e5eeff",
+                        "tertiary-container": "#b5b8ba",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "on-primary-container": "#0f5400",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#bdcbb3",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#45494b",
+                        "surface-variant": "#d3e4fe",
+                        "primary-container": "#50d130",
+                        "surface-container-high": "#dce9ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-surface-variant": "#3e4a38"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "md": "16px",
+                        "margin": "24px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "xxl": "64px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scroll-hide::-webkit-scrollbar { display: none; }
+        .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-background dark:bg-background flex justify-between items-center px-margin py-md w-full z-40 transition-opacity hover:opacity-80">
+<div class="flex items-center gap-sm active:scale-95 transition-transform cursor-pointer">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a young man with a warm smile, set against a clean, minimalist studio background with soft cinematic lighting. The image embodies a modern, approachable wellness coach persona, using a bright and airy color palette that aligns with a high-end health application. The lighting is high-key and flattering, emphasizing a healthy lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl_EhTxtcCf02xOOjjxpUoa9CYMNumFpxU_lnridnRNXQ6lVSJi7m_oIz-M66M_Jnmc_xCz2L8cglyP4B-Mr6Visyqi0UrI9NDwSTP8eTG5_oXhz17QseMBPE8YF3bMBb9mZRLQSpAamyU7vlnX1UeofL38DPbzWYq8aSywc_U0MnjNyDZLQMsNisZKttHs4qK4ywK-SQ2bM5dh4QeK4tmkG6vrrx7zVY1GmdGWBPPZe1Wj4B_TUvsI8sLxbfkiHlhn_hS5NR3Wng"/>
+</div>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">helt.ty</h1>
+<button class="material-symbols-outlined text-primary dark:text-inverse-primary p-2 active:scale-95 transition-transform">settings</button>
+</header>
+<main class="px-margin pt-lg max-w-7xl mx-auto">
+<!-- Screen Title -->
+<section class="mb-xl">
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-xs">Здравни данни</h2>
+<p class="text-on-surface-variant font-body-lg">Обобщение на вашето състояние за месеца</p>
+</section>
+<!-- Bento Grid Metrics -->
+<div class="grid grid-cols-4 grid-rows-2 gap-md h-[420px] md:h-[500px]">
+<!-- Sleep Card -->
+<div class="col-span-4 md:col-span-2 row-span-1 bg-surface-container-lowest rounded-xl shadow-md p-lg flex flex-col justify-between border border-outline-variant/20 group hover:shadow-lg transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-primary-container/20 p-sm rounded-full">
+<span class="material-symbols-outlined text-primary">bedtime</span>
+</div>
+<span class="text-primary font-label-md bg-primary-container/10 px-md py-xs rounded-full">+12% спрямо мин. седмица</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-md mb-xs">Сън</p>
+<div class="flex items-baseline gap-xs">
+<span class="font-headline-lg text-headline-lg">7ч 42м</span>
+<span class="text-on-surface-variant font-body-md">средно</span>
+</div>
+</div>
+<div class="w-full h-12 flex items-end gap-1">
+<div class="bg-primary-container w-full h-[60%] rounded-t-sm group-hover:h-[80%] transition-all"></div>
+<div class="bg-primary-container w-full h-[40%] rounded-t-sm group-hover:h-[60%] transition-all"></div>
+<div class="bg-primary-container w-full h-[90%] rounded-t-sm group-hover:h-[100%] transition-all"></div>
+<div class="bg-primary-container w-full h-[75%] rounded-t-sm group-hover:h-[85%] transition-all"></div>
+<div class="bg-primary-container w-full h-[55%] rounded-t-sm group-hover:h-[70%] transition-all"></div>
+<div class="bg-primary-container w-full h-[85%] rounded-t-sm group-hover:h-[95%] transition-all"></div>
+<div class="bg-primary-container w-full h-[70%] rounded-t-sm group-hover:h-[80%] transition-all"></div>
+</div>
+</div>
+<!-- Heart Rate Card -->
+<div class="col-span-2 md:col-span-1 row-span-1 bg-white rounded-xl shadow-md p-lg border border-outline-variant/10 flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-error text-[40px] mb-md" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<p class="text-on-surface-variant font-label-md">Сърдечен ритъм</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">68 <span class="text-body-md font-normal text-on-surface-variant">bpm</span></h3>
+</div>
+<!-- Weight Card -->
+<div class="col-span-2 md:col-span-1 row-span-1 bg-primary text-on-primary rounded-xl shadow-md p-lg flex flex-col justify-between border border-primary/20">
+<div class="bg-white/20 w-fit p-sm rounded-full">
+<span class="material-symbols-outlined">monitor_weight</span>
+</div>
+<div>
+<p class="font-label-md opacity-80">Тегло</p>
+<h3 class="font-headline-lg text-headline-lg">74.2 <span class="text-body-md">кг</span></h3>
+<p class="font-label-sm mt-xs">-0.8 кг този месец</p>
+</div>
+</div>
+<!-- Monthly Progress Chart -->
+<div class="col-span-4 row-span-1 bg-surface-container-lowest rounded-xl shadow-md p-lg border border-outline-variant/20">
+<div class="flex justify-between items-center mb-lg">
+<h3 class="font-headline-md text-headline-md">Месечен напредък</h3>
+<select class="bg-surface-container-low border-none rounded-full px-lg py-sm font-label-md text-primary outline-none focus:ring-2 focus:ring-primary">
+<option>Октомври</option>
+<option>Септември</option>
+</select>
+</div>
+<div class="relative h-40 w-full flex items-end justify-between px-md pt-md">
+<!-- Fake Chart Grid Lines -->
+<div class="absolute inset-x-0 top-0 h-px bg-outline-variant/10"></div>
+<div class="absolute inset-x-0 top-1/2 h-px bg-outline-variant/10"></div>
+<div class="absolute inset-x-0 bottom-0 h-px bg-outline-variant/20"></div>
+<!-- SVG Chart Line -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,80 Q50,70 100,40 T200,50 T300,20 T400,30" fill="none" stroke="#176e00" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,80 Q50,70 100,40 T200,50 T300,20 T400,30 L400,100 L0,100 Z" fill="url(#grad1)" opacity="0.1"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#176e00;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#176e00;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="text-label-sm text-on-surface-variant z-10">Сед 1</div>
+<div class="text-label-sm text-on-surface-variant z-10">Сед 2</div>
+<div class="text-label-sm text-on-surface-variant z-10">Сед 3</div>
+<div class="text-label-sm text-on-surface-variant z-10">Сед 4</div>
+</div>
+</div>
+</div>
+<!-- Actionable Insights -->
+<section class="mt-xl mb-xxl">
+<h3 class="font-headline-md text-headline-md mb-lg">Здравни съвети</h3>
+<div class="space-y-md">
+<!-- Tip 1 -->
+<div class="flex items-center gap-lg bg-surface-container-low p-lg rounded-xl border border-transparent hover:border-primary-container transition-all cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">water_drop</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-on-surface mb-xs">Хидратацията е ключова</h4>
+<p class="font-body-md text-on-surface-variant">Забелязахме лек спад в енергията ви. Опитайте се да пиете по 2.5л вода днес.</p>
+</div>
+<button class="material-symbols-outlined text-outline">chevron_right</button>
+</div>
+<!-- Tip 2 -->
+<div class="flex items-center gap-lg bg-surface-container-low p-lg rounded-xl border border-transparent hover:border-primary-container transition-all cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+</div>
+<div class="flex-1">
+<h4 class="font-label-md text-on-surface mb-xs">Време за разтягане</h4>
+<p class="font-body-md text-on-surface-variant">След дългия работен ден, 10 минути йога ще подобрят качеството на съня ви.</p>
+</div>
+<button class="material-symbols-outlined text-outline">chevron_right</button>
+</div>
+<!-- Tip 3 - Visual Card -->
+<div class="relative overflow-hidden rounded-xl h-48 group cursor-pointer shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A serene person practicing meditation in a sun-drenched, airy room with lush green indoor plants and minimalist white furniture. The scene is bathed in golden hour natural sunlight, creating long soft shadows and a peaceful, healthy atmosphere. The color palette is composed of soft whites, earthy greens, and warm wood tones, reflecting a holistic wellness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ysNn8MOmP70c6wCgAAx_hZva09D4_RX1khN705Lm9H6P7PG_dRuuOhcbHIzgohokVr05T5BNsEie6zy13-Q_cF5hKq-rH1BPG9_SWTXeOP1TWzWVS2fN96b5JCsyP9th0PtuB2AmoCQc8jzWO2GfXV2PZcUENiGIYiYWNj5gznn426GmljCUdjTRXo67ShDL5yhDW-fT7uR65cYHE3PNeJ0a5lmN7rimJBqTBR8DOq0xsAB4Ih11qjX5DSSEpaNWH8C4yvPJvw4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-lg flex flex-col justify-end">
+<h4 class="text-white font-headline-md">Ново: Медитация за фокус</h4>
+<p class="text-white/80 font-body-md">Открийте новата ни аудио сесия за продуктивност.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface dark:bg-surface shadow-[0_-4px_12px_rgba(15,23,42,0.1)] rounded-t-lg">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-xl px-4 py-1 active:scale-90 duration-200 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 active:scale-90 duration-200 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-sm text-label-sm">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 active:scale-90 duration-200 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-label-sm text-label-sm">Nutrition</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 active:scale-90 duration-200 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for cards
+        document.querySelectorAll('.rounded-xl').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('translate-y-[-4px]');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('translate-y-[-4px]');
+            });
+        });
+
+        // Dynamic chart point highlighting logic could go here
+    </script>
+</body></html>
