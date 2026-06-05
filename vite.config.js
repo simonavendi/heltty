@@ -64,7 +64,7 @@ function stitchAssets() {
 
 export default defineConfig({
   root: '.',
-  publicDir: false,
+  publicDir: 'public',
   plugins: [stitchAssets()],
   server: {
     port: 5173,
